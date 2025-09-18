@@ -32,7 +32,7 @@ const Hero = () => {
         
         {/* Subtitle */}
         <p className="text-xl sm:text-2xl md:text-3xl font-semibold text-foreground/80 mb-16 max-w-4xl mx-auto leading-relaxed">
-          The Revolutionary Meme Token on Solana Ecosystem
+          The Original Monkey-Banana Meme Token on Solana 🐒🍌
         </p>
         
         {/* Social Media Links */}
