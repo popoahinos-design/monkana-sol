@@ -1,4 +1,4 @@
-import tokenMascot from "@/assets/token-mascot.png";
+import monkanaMascot from "@/assets/monkana-mascot.png";
 import { Button } from "@/components/ui/button";
 const Hero = () => {
   return <section className="min-h-screen flex flex-col items-center justify-center px-4 py-20">
@@ -10,7 +10,7 @@ const Hero = () => {
         
         {/* Mascot */}
         <div className="flex justify-center mb-8">
-          <img src={tokenMascot} alt="Token Mascot" className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 wiggle drop-shadow-2xl" />
+          <img src={monkanaMascot} alt="MONKANA Mascot" className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 wiggle drop-shadow-2xl" />
         </div>
         
         {/* Subtitle */}
