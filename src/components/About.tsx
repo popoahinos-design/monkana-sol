@@ -1,3 +1,5 @@
+import monkeyBanana from "@/assets/monkey-banana.jpg";
+
 const About = () => {
   return <section className="py-20 px-4">
       <div className="max-w-4xl mx-auto">
@@ -5,6 +7,15 @@ const About = () => {
           <h2 className="text-6xl lg:text-8xl hero-text mb-8 md:text-9xl">
             ABOUT
           </h2>
+          
+          {/* Hero Image */}
+          <div className="flex justify-center mb-8">
+            <img 
+              src={monkeyBanana} 
+              alt="Monkana Jungle Mascot" 
+              className="w-80 h-80 md:w-96 md:h-96 rounded-2xl object-cover shadow-glow border-2 border-border"
+            />
+          </div>
           
           <div className="space-y-6 text-lg md:text-xl lg:text-2xl font-semibold text-foreground leading-relaxed">
             <p>
