@@ -58,7 +58,7 @@ const About = () => {
               <img 
                 src={monkBananaCar} 
                 alt="Monky in Banana Car" 
-                className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-2xl object-contain shadow-glow border-2 border-border bg-gradient-to-br from-primary/10 to-accent/10"
+                className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-2xl object-contain shadow-glow border-2 border-border bg-gradient-to-br from-primary/10 to-accent/10 hover-scale animate-fade-in hover:animate-pulse transition-all duration-300 hover:shadow-2xl hover:rotate-2"
               />
             </div>
             
