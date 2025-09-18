@@ -15,7 +15,7 @@ const Hero = () => {
         
         {/* Subtitle */}
         <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-12 drop-shadow-lg">
-          🚀 The Next Big Meme Token 🚀
+          🚀 Monkana_Sol ($Monky), the memecoin that is establishing itself in the Solana ecosystem. 🚀
         </p>
         
         {/* CTA Buttons */}
