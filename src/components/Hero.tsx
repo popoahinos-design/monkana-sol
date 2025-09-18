@@ -18,14 +18,26 @@ const Hero = () => {
           🚀 Monkana_Sol ($Monky), the memecoin that is establishing itself in the Solana ecosystem. 🚀
         </p>
         
-        {/* CTA Buttons */}
+        {/* Social Links */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <Button className="meme-button text-black hover:text-white">
-            🛒 BUY NOW
-          </Button>
-          <Button className="meme-button bg-secondary hover:bg-secondary/80 text-white">
-            📱 JOIN TELEGRAM
-          </Button>
+          <a 
+            href="https://t.me/Monkana_Sol"
+            className="meme-button text-foreground hover:text-background transition-colors hover:text-blue-400"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="text-2xl mr-2">📱</span>
+            Telegram
+          </a>
+          <a 
+            href="https://x.com/Monky693303?t=AMD_87E_aL0l5D2z_AmefQ&s=09"
+            className="meme-button text-foreground hover:text-background transition-colors hover:text-blue-500"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="text-2xl mr-2">🐦</span>
+            Twitter
+          </a>
         </div>
       </div>
       
