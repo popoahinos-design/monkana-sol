@@ -5,7 +5,7 @@ const Hero = () => {
     <section className="section-spacing min-h-screen flex items-center justify-center relative">
       <div className="container-width text-center">
         {/* Main Title */}
-        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl mb-8 leading-tight font-extrabold font-black-ops relative inline-block">
+        <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl mb-8 leading-tight font-extrabold font-black-ops relative inline-block whitespace-nowrap">
           <span className="text-[hsl(var(--gold))] drop-shadow-2xl" style={{textShadow: '3px 3px 0px rgba(0,0,0,0.3), 6px 6px 10px rgba(0,0,0,0.2)'}}>
             $M
             <span className="relative inline-block">
