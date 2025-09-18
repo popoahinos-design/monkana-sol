@@ -20,10 +20,10 @@ const About = () => {
           
           <div className="space-y-4 sm:space-y-6 text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-foreground leading-relaxed px-2">
             <p>
-              🛡️ <strong>Monkana is embarking on a journey to restore order in the cryptocurrency world.</strong> 
-              Monkana strives to create a safe and transparent environment for Solana meme investors. 
+              🛡️ <strong className="text-blue-600">Monkana is embarking on a journey to restore order in the cryptocurrency world.</strong> 
+              <span className="text-blue-600">Monkana strives to create a safe and transparent environment for Solana meme investors. 
               With the support of the crypto community, Monkana promises a bright future and is determined 
-              to make a lasting impact on the cryptocurrency market.
+              to make a lasting impact on the cryptocurrency market.</span>
             </p>
             
             <p>
