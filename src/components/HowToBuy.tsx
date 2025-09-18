@@ -54,26 +54,26 @@ const HowToBuy = () => {
   return (
     <section className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-6xl md:text-7xl lg:text-8xl hero-text text-center mb-16">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl hero-text text-center mb-8 sm:mb-16 break-words">
           HOW TO BUY
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
           {steps.map((step) => (
             <div key={step.number} className="meme-card text-center group">
               <div className="text-6xl mb-4 group-hover:animate-bounce">
                 {step.icon}
               </div>
               
-              <div className="text-4xl font-black-ops text-black mb-4 text-shadow">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-black text-foreground mb-4">
                 {step.number}
               </div>
               
-              <h3 className="text-2xl font-bold text-black mb-4">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-4 break-words">
                 {step.title}
               </h3>
               
-              <p className="text-lg font-medium text-black leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg font-medium text-foreground leading-relaxed">
                 {step.description}
               </p>
             </div>
@@ -81,12 +81,12 @@ const HowToBuy = () => {
         </div>
         
         {/* Trading Widget */}
-        <div className="mt-16 text-center">
+        <div className="mt-8 sm:mt-16 text-center">
           <div className="meme-card max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold text-black mb-6">🚀 TRADE NOW</h3>
-            <div style={{paddingTop: "55.49%", position: "relative"}}>
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-4 sm:mb-6 break-words">🚀 TRADE NOW</h3>
+            <div className="w-full" style={{paddingTop: "65%", position: "relative"}}>
               <iframe 
-                className="h2b__widget" 
+                className="h2b__widget rounded-lg" 
                 src="https://raydium.io/swap/?inputMint=sol&outputMint=4aW4s1hkZogELxU7mCYD82UzrwQ3h69AcmYoSsRQbonk" 
                 style={{
                   opacity: 1, 
@@ -96,7 +96,8 @@ const HowToBuy = () => {
                   height: "100%", 
                   left: "0px", 
                   top: "0px", 
-                  position: "absolute"
+                  position: "absolute",
+                  border: "none"
                 }} 
                 data-level="83"
               />
@@ -105,17 +106,17 @@ const HowToBuy = () => {
         </div>
 
         {/* Contract Address */}
-        <div className="mt-16 text-center">
+        <div className="mt-8 sm:mt-16 text-center">
           <div className="meme-card max-w-2xl mx-auto">
-            <h3 className="text-3xl font-bold text-black mb-4">📋 Contract Address</h3>
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-4 break-words">📋 Contract Address</h3>
             <div 
               onClick={copyToClipboard}
-              className="bg-black text-accent p-4 rounded-lg font-mono text-sm md:text-base break-all cursor-pointer hover:bg-gray-800 transition-colors duration-200 border-2 border-transparent hover:border-accent"
+              className="bg-card text-accent p-3 sm:p-4 rounded-lg font-mono text-xs sm:text-sm md:text-base break-all cursor-pointer hover:bg-accent/10 transition-colors duration-200 border-2 border-border hover:border-accent"
               title="Click to copy"
             >
               {copied ? "✅ Copied!" : contractAddress}
             </div>
-            <p className="text-sm text-muted-foreground mt-2 font-semibold">
+            <p className="text-xs sm:text-sm text-muted-foreground mt-2 font-semibold px-2">
               ⚠️ Always verify the contract address before trading! Click to copy.
             </p>
           </div>

@@ -4,7 +4,7 @@ const About = () => {
   return <section className="py-20 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="meme-card text-center">
-          <h2 className="text-6xl lg:text-8xl hero-text mb-8 md:text-9xl">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl hero-text mb-8 break-words">
             ABOUT
           </h2>
           
@@ -13,11 +13,11 @@ const About = () => {
             <img 
               src={monkeyBanana} 
               alt="Monkana Jungle Mascot" 
-              className="w-80 h-80 md:w-96 md:h-96 rounded-2xl object-cover shadow-glow border-2 border-border"
+              className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-2xl object-cover shadow-glow border-2 border-border"
             />
           </div>
           
-          <div className="space-y-6 text-lg md:text-xl lg:text-2xl font-semibold text-foreground leading-relaxed">
+          <div className="space-y-4 sm:space-y-6 text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-foreground leading-relaxed px-2">
             <p>
               🛡️ <strong>Monkana is embarking on a journey to restore order in the cryptocurrency world.</strong> 
               Monkana strives to create a safe and transparent environment for Solana meme investors. 
@@ -42,7 +42,7 @@ const About = () => {
               we're building a space station!
             </p>
             
-            <p className="text-2xl md:text-3xl font-black text-accent">
+            <p className="text-xl sm:text-2xl md:text-3xl font-black text-accent break-words">
               🌟 HODL STRONG, MEME HARDER! 🌟
             </p>
           </div>

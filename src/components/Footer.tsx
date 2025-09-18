@@ -24,16 +24,16 @@ const Footer = () => {
     <footer className="py-16 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="meme-card text-center">
-          <h3 className="text-5xl md:text-6xl hero-text mb-8">
+          <h3 className="text-2xl sm:text-3xl md:text-5xl hero-text mb-6 sm:mb-8 break-words">
             JOIN THE COMMUNITY
           </h3>
           
-          <p className="text-xl md:text-2xl font-bold text-black mb-8">
+          <p className="text-base sm:text-lg md:text-xl font-bold text-foreground mb-6 sm:mb-8 px-2 leading-relaxed">
             🚀 Ready to moon with us? Connect with fellow holders! 🚀
           </p>
           
           {/* Social Links */}
-          <div className="flex flex-wrap justify-center gap-6 mb-8">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-6 mb-6 sm:mb-8">
             {socialLinks.map((social) => (
               <a 
                 key={social.name}
@@ -49,8 +49,8 @@ const Footer = () => {
           </div>
           
           {/* Disclaimer */}
-          <div className="border-t-4 border-black pt-8 mt-8">
-            <p className="text-sm md:text-base font-semibold text-black opacity-80 leading-relaxed">
+          <div className="border-t-2 sm:border-t-4 border-border pt-6 sm:pt-8 mt-6 sm:mt-8">
+            <p className="text-xs sm:text-sm md:text-base font-semibold text-foreground opacity-80 leading-relaxed px-2">
               ⚠️ <strong>DISCLAIMER:</strong> $MONKANA is a meme token created for entertainment purposes. 
               Cryptocurrency investments carry risk. Only invest what you can afford to lose. 
               Do your own research before trading. Not financial advice.
@@ -58,7 +58,7 @@ const Footer = () => {
           </div>
           
           {/* Copyright */}
-          <div className="mt-6 text-lg font-bold text-black">
+          <div className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg font-bold text-foreground break-words">
             © 2024 $MONKANA • Made with 💎 by the Community
           </div>
         </div>

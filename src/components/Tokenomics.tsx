@@ -40,24 +40,24 @@ const Tokenomics = () => {
   return (
     <section className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-6xl md:text-7xl lg:text-8xl hero-text text-center mb-16">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl hero-text text-center mb-8 sm:mb-16 break-words">
           TOKENOMICS
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 mb-8 sm:mb-16">
           {tokenomicsData.map((item, index) => (
             <div key={index} className="meme-card text-center">
               <div className="text-5xl mb-4">{item.icon}</div>
               
-              <h3 className="text-2xl font-bold text-black mb-2">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-2 break-words">
                 {item.label}
               </h3>
               
-              <div className="text-4xl font-black-ops text-black mb-4">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-black text-foreground mb-4">
                 {item.percentage}
               </div>
               
-              <p className="text-lg font-semibold text-muted-foreground">
+              <p className="text-sm sm:text-base md:text-lg font-semibold text-muted-foreground break-all">
                 {item.value} $MONKANA
               </p>
               
@@ -74,11 +74,11 @@ const Tokenomics = () => {
         
         {/* Key Features */}
         <div className="meme-card max-w-4xl mx-auto">
-          <h3 className="text-4xl font-bold text-black text-center mb-8">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground text-center mb-6 sm:mb-8 break-words">
             🔥 KEY FEATURES 🔥
           </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-lg font-semibold">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 text-base sm:text-lg font-semibold">
             <div className="flex items-center space-x-3">
               <span className="text-2xl">✅</span>
               <span>0% Tax on Buy/Sell</span>
