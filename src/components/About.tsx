@@ -1,9 +1,8 @@
 const About = () => {
-  return (
-    <section className="py-20 px-4">
+  return <section className="py-20 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="meme-card text-center">
-          <h2 className="text-6xl md:text-7xl lg:text-8xl hero-text mb-8">
+          <h2 className="text-6xl lg:text-8xl hero-text mb-8 text-[#13256c] md:text-9xl">
             ABOUT
           </h2>
           
@@ -31,8 +30,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
