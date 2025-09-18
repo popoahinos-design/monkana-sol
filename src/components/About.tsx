@@ -64,7 +64,7 @@ const About = () => {
             
             <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-foreground leading-relaxed px-2">
               <p>
-                <strong>Monkana is embarking on a journey to restore order in the cryptocurrency world.</strong> Monkana strives to create a safe and transparent environment for Solana meme investors. With the support of the crypto community, Monkana promises a bright future and is determined to make a lasting impact on the cryptocurrency market.
+                <strong>Monkana is embarking on a journey to restore order in the cryptocurrency world.</strong> Monkana strives to create a safe and transparent environment for Solana meme investors. With the support of the crypto community, Monkana promises a bright future and is determined to make a lasting impact on the cryptocurrency market. For those looking for a hero in the Solana meme coin space, #MONKANA is ready with courage and determination to lead you into a better future for Solana meme coin investors.
               </p>
             </div>
           </div>
