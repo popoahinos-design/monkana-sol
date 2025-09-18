@@ -59,7 +59,7 @@ const Footer = () => {
           
           {/* Copyright */}
           <div className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg font-bold text-foreground break-words">
-            © 2024 $MONKANA • Made with 💎 by the Community
+            © 2025 $MONKANA • Made with 💎 by the Community
           </div>
         </div>
       </div>
