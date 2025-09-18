@@ -4,7 +4,7 @@ const Hero = () => {
   return <section className="min-h-screen flex flex-col items-center justify-center px-4 py-20">
       <div className="text-center max-w-6xl mx-auto">
         {/* Main Title */}
-        <h1 className="hero-text sm:text-9xl md:text-[12rem] lg:text-[15rem] xl:text-[18rem] font-black leading-none mb-8 text-9xl text-[#044c04]">
+        <h1 className="hero-text sm:text-9xl md:text-[12rem] lg:text-[15rem] xl:text-[18rem] font-black leading-none mb-8 text-9xl">
           $MONKANA
         </h1>
         
@@ -14,7 +14,7 @@ const Hero = () => {
         </div>
         
         {/* Subtitle */}
-        <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-12 drop-shadow-lg">
+        <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-12 drop-shadow-lg">
           🚀 Monkana_Sol ($Monky), the memecoin that is establishing itself in the Solana ecosystem. 🚀
         </p>
         
@@ -35,7 +35,7 @@ const Hero = () => {
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
         <div className="animate-bounce">
-          <div className="w-1 h-8 bg-black rounded-full"></div>
+          <div className="w-1 h-8 bg-foreground rounded-full"></div>
         </div>
       </div>
     </section>;

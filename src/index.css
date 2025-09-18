@@ -8,46 +8,55 @@
 
 @layer base {
   :root {
-    /* Meme Color Palette */
-    --background: 45 100% 65%; /* Bright yellow/orange */
-    --foreground: 0 0% 0%; /* Pure black */
+    /* Jungle-Inspired Professional Palette */
+    --background: 75 25% 85%; /* Soft jungle cream */
+    --foreground: 140 50% 12%; /* Deep jungle green */
 
-    --card: 45 100% 70%;
-    --card-foreground: 0 0% 0%;
+    --card: 60 15% 95%; /* Light cream */
+    --card-foreground: 140 50% 15%;
 
-    --popover: 45 100% 75%;
-    --popover-foreground: 0 0% 0%;
+    --popover: 60 20% 92%;
+    --popover-foreground: 140 50% 15%;
 
-    --primary: 0 0% 0%; /* Black */
-    --primary-foreground: 45 100% 65%;
+    --primary: 140 70% 25%; /* Rich jungle green */
+    --primary-foreground: 60 30% 95%;
 
-    --secondary: 120 60% 50%; /* Meme green */
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 45 85% 55%; /* Golden banana */
+    --secondary-foreground: 140 50% 15%;
 
-    --muted: 45 100% 80%;
-    --muted-foreground: 0 0% 20%;
+    --muted: 75 15% 88%;
+    --muted-foreground: 140 30% 25%;
 
-    --accent: 300 100% 60%; /* Hot pink accent */
-    --accent-foreground: 0 0% 0%;
+    --accent: 35 75% 50%; /* Warm earth tone */
+    --accent-foreground: 60 30% 95%;
 
-    --destructive: 0 100% 50%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 60 30% 95%;
 
-    --border: 0 0% 0%;
-    --input: 45 100% 70%;
-    --ring: 0 0% 0%;
+    --border: 140 40% 20%;
+    --input: 75 20% 90%;
+    --ring: 140 70% 25%;
 
     --radius: 1rem;
 
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(45 100% 65%), hsl(35 100% 60%), hsl(25 100% 55%));
-    --gradient-card: linear-gradient(180deg, hsl(45 100% 70%), hsl(45 100% 65%));
-    --gradient-accent: linear-gradient(45deg, hsl(300 100% 60%), hsl(270 100% 65%));
+    /* Professional Jungle Gradients */
+    --gradient-hero: linear-gradient(135deg, 
+      hsl(120 40% 45%) 0%, 
+      hsl(100 50% 40%) 25%, 
+      hsl(80 60% 50%) 50%, 
+      hsl(60 70% 60%) 75%, 
+      hsl(45 80% 65%) 100%);
+    --gradient-card: linear-gradient(180deg, 
+      hsl(75 25% 95%) 0%, 
+      hsl(70 20% 90%) 100%);
+    --gradient-accent: linear-gradient(45deg, 
+      hsl(45 85% 55%) 0%, 
+      hsl(35 75% 50%) 100%);
 
-    /* Shadows */
-    --shadow-brutal: 8px 8px 0px hsl(0 0% 0%);
-    --shadow-hover: 12px 12px 0px hsl(0 0% 0%);
-    --shadow-glow: 0 0 40px hsl(300 100% 60% / 0.5);
+    /* Sophisticated Shadows */
+    --shadow-brutal: 6px 6px 0px hsl(140 50% 15% / 0.3);
+    --shadow-hover: 8px 8px 0px hsl(140 50% 15% / 0.4);
+    --shadow-glow: 0 0 30px hsl(45 85% 55% / 0.4);
 
     /* Animations */
     --bounce-wild: bounce 2s ease-in-out infinite;
@@ -74,33 +83,34 @@
 
 @layer components {
   .hero-text {
-    @apply font-black-ops text-black drop-shadow-[4px_4px_0px_rgba(255,255,255,0.8)];
-    text-shadow: 4px 4px 0px rgba(255,255,255,0.8), 8px 8px 0px rgba(0,0,0,0.3);
+    @apply font-black-ops text-foreground drop-shadow-[3px_3px_0px_rgba(255,255,255,0.9)];
+    text-shadow: 3px 3px 0px rgba(255,255,255,0.9), 6px 6px 0px hsl(140 50% 15% / 0.2);
   }
 
   .meme-card {
-    @apply bg-card border-4 border-black rounded-2xl p-6;
+    @apply bg-card border-2 border-border rounded-2xl p-8;
     background: var(--gradient-card);
     box-shadow: var(--shadow-brutal);
     transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
   }
 
   .meme-card:hover {
     box-shadow: var(--shadow-hover);
-    transform: translate(-4px, -4px);
+    transform: translate(-3px, -3px);
   }
 
   .meme-button {
-    @apply px-8 py-4 font-bold text-xl border-4 border-black rounded-xl;
+    @apply px-8 py-4 font-bold text-xl border-2 border-border rounded-xl;
     background: var(--gradient-accent);
     box-shadow: var(--shadow-brutal);
-    transition: all 0.2s ease;
-    text-shadow: 2px 2px 0px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    text-shadow: 2px 2px 0px hsl(140 50% 15% / 0.2);
   }
 
   .meme-button:hover {
     box-shadow: var(--shadow-hover);
-    transform: translate(-4px, -4px);
+    transform: translate(-3px, -3px);
   }
 
   .wiggle {

@@ -2,11 +2,11 @@ const About = () => {
   return <section className="py-20 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="meme-card text-center">
-          <h2 className="text-6xl lg:text-8xl hero-text mb-8 text-[#13256c] md:text-9xl">
+          <h2 className="text-6xl lg:text-8xl hero-text mb-8 md:text-9xl">
             ABOUT
           </h2>
           
-          <div className="space-y-6 text-lg md:text-xl lg:text-2xl font-semibold text-black leading-relaxed">
+          <div className="space-y-6 text-lg md:text-xl lg:text-2xl font-semibold text-foreground leading-relaxed">
             <p>
               🛡️ <strong>Monkana is embarking on a journey to restore order in the cryptocurrency world.</strong> 
               Monkana strives to create a safe and transparent environment for Solana meme investors. 
