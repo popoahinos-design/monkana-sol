@@ -1,22 +1,16 @@
 import tokenMascot from "@/assets/token-mascot.png";
 import { Button } from "@/components/ui/button";
-
 const Hero = () => {
-  return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-4 py-20">
+  return <section className="min-h-screen flex flex-col items-center justify-center px-4 py-20">
       <div className="text-center max-w-6xl mx-auto">
         {/* Main Title */}
-        <h1 className="hero-text text-8xl sm:text-9xl md:text-[12rem] lg:text-[15rem] xl:text-[18rem] font-black leading-none mb-8">
+        <h1 className="hero-text sm:text-9xl md:text-[12rem] lg:text-[15rem] xl:text-[18rem] font-black leading-none mb-8 text-9xl text-[#044c04]">
           $MONKANA
         </h1>
         
         {/* Mascot */}
         <div className="flex justify-center mb-8">
-          <img 
-            src={tokenMascot} 
-            alt="Token Mascot" 
-            className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 wiggle drop-shadow-2xl"
-          />
+          <img src={tokenMascot} alt="Token Mascot" className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 wiggle drop-shadow-2xl" />
         </div>
         
         {/* Subtitle */}
@@ -41,8 +35,6 @@ const Hero = () => {
           <div className="w-1 h-8 bg-black rounded-full"></div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
