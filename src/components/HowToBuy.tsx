@@ -55,12 +55,36 @@ const HowToBuy = () => {
           ))}
         </div>
         
+        {/* Trading Widget */}
+        <div className="mt-16 text-center">
+          <div className="meme-card max-w-4xl mx-auto">
+            <h3 className="text-3xl font-bold text-black mb-6">🚀 TRADE NOW</h3>
+            <div style={{paddingTop: "55.49%", position: "relative"}}>
+              <iframe 
+                className="h2b__widget" 
+                src="https://raydium.io/swap/?inputMint=sol&outputMint=4aW4s1hkZogELxU7mCYD82UzrwQ3h69AcmYoSsRQbonk" 
+                style={{
+                  opacity: 1, 
+                  visibility: "visible", 
+                  display: "block", 
+                  width: "100%", 
+                  height: "100%", 
+                  left: "0px", 
+                  top: "0px", 
+                  position: "absolute"
+                }} 
+                data-level="83"
+              />
+            </div>
+          </div>
+        </div>
+
         {/* Contract Address */}
         <div className="mt-16 text-center">
           <div className="meme-card max-w-2xl mx-auto">
             <h3 className="text-3xl font-bold text-black mb-4">📋 Contract Address</h3>
             <div className="bg-black text-accent p-4 rounded-lg font-mono text-sm md:text-base break-all">
-              0x1234567890abcdef1234567890abcdef12345678
+              4aW4s1hkZogELxU7mCYD82UzrwQ3h69AcmYoSsRQbonk
             </div>
             <p className="text-sm text-muted-foreground mt-2 font-semibold">
               ⚠️ Always verify the contract address before trading!
