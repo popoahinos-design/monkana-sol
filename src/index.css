@@ -4,64 +4,95 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Meme Token Design System */
+/* Modern Professional Design System */
 
 @layer base {
   :root {
-    /* Jungle-Inspired Professional Palette */
-    --background: 75 25% 85%; /* Soft jungle cream */
-    --foreground: 140 50% 12%; /* Deep jungle green */
+    /* Modern Professional Palette */
+    --background: 0 0% 100%; /* Pure white */
+    --foreground: 222 84% 4.9%; /* Almost black */
 
-    --card: 60 15% 95%; /* Light cream */
-    --card-foreground: 140 50% 15%;
+    --card: 0 0% 100%; /* White cards */
+    --card-foreground: 222 84% 4.9%;
 
-    --popover: 60 20% 92%;
-    --popover-foreground: 140 50% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 84% 4.9%;
 
-    --primary: 140 70% 25%; /* Rich jungle green */
-    --primary-foreground: 60 30% 95%;
+    --primary: 221 83% 53%; /* Professional blue */
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 45 85% 55%; /* Golden banana */
-    --secondary-foreground: 140 50% 15%;
+    --secondary: 210 40% 96%; /* Light gray */
+    --secondary-foreground: 222 47% 11%;
 
-    --muted: 75 15% 88%;
-    --muted-foreground: 140 30% 25%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 35 75% 50%; /* Warm earth tone */
-    --accent-foreground: 60 30% 95%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
 
-    --destructive: 0 70% 50%;
-    --destructive-foreground: 60 30% 95%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 140 40% 20%;
-    --input: 75 20% 90%;
-    --ring: 140 70% 25%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 221 83% 53%;
 
-    --radius: 1rem;
+    --radius: 0.5rem;
 
-    /* Professional Jungle Gradients */
+    /* Modern Professional Gradients */
     --gradient-hero: linear-gradient(135deg, 
-      hsl(120 40% 45%) 0%, 
-      hsl(100 50% 40%) 25%, 
-      hsl(80 60% 50%) 50%, 
-      hsl(60 70% 60%) 75%, 
-      hsl(45 80% 65%) 100%);
+      hsl(221 83% 53%) 0%, 
+      hsl(230 100% 67%) 25%, 
+      hsl(240 100% 70%) 50%, 
+      hsl(250 100% 75%) 75%, 
+      hsl(260 100% 80%) 100%);
     --gradient-card: linear-gradient(180deg, 
-      hsl(75 25% 95%) 0%, 
-      hsl(70 20% 90%) 100%);
+      hsl(0 0% 100%) 0%, 
+      hsl(210 40% 98%) 100%);
     --gradient-accent: linear-gradient(45deg, 
-      hsl(45 85% 55%) 0%, 
-      hsl(35 75% 50%) 100%);
+      hsl(221 83% 53%) 0%, 
+      hsl(230 100% 67%) 100%);
 
-    /* Sophisticated Shadows */
-    --shadow-brutal: 6px 6px 0px hsl(140 50% 15% / 0.3);
-    --shadow-hover: 8px 8px 0px hsl(140 50% 15% / 0.4);
-    --shadow-glow: 0 0 30px hsl(45 85% 55% / 0.4);
+    /* Clean Modern Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 
-    /* Animations */
-    --bounce-wild: bounce 2s ease-in-out infinite;
-    --wiggle: wiggle 1s ease-in-out infinite;
+    /* Smooth Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 
+  }
+
+  .dark {
+    --background: 222 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 221 83% 53%;
+    --primary-foreground: 222 84% 4.9%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 221 83% 53%;
   }
 }
 
@@ -72,7 +103,7 @@
 
   body {
     @apply bg-background text-foreground font-fredoka overflow-x-hidden;
-    background: var(--gradient-hero);
+    background: linear-gradient(135deg, hsl(221 83% 53%) 0%, hsl(230 100% 67%) 100%);
     min-height: 100vh;
   }
 
@@ -83,34 +114,56 @@
 
 @layer components {
   .hero-text {
-    @apply font-black-ops text-foreground drop-shadow-[3px_3px_0px_rgba(255,255,255,0.9)];
-    text-shadow: 3px 3px 0px rgba(255,255,255,0.9), 6px 6px 0px hsl(140 50% 15% / 0.2);
+    @apply font-black-ops text-foreground;
+    background: linear-gradient(135deg, hsl(221 83% 53%), hsl(230 100% 67%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
   }
 
-  .meme-card {
-    @apply bg-card border-2 border-border rounded-2xl p-8;
+  .professional-card {
+    @apply bg-card border border-border rounded-lg p-8;
     background: var(--gradient-card);
-    box-shadow: var(--shadow-brutal);
-    transition: all 0.3s ease;
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition-smooth);
     backdrop-filter: blur(10px);
   }
 
-  .meme-card:hover {
-    box-shadow: var(--shadow-hover);
-    transform: translate(-3px, -3px);
+  .professional-card:hover {
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-2px);
+  }
+
+  .professional-button {
+    @apply px-8 py-4 font-semibold text-lg rounded-lg;
+    background: var(--gradient-accent);
+    color: white;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-smooth);
+    border: 1px solid hsl(var(--primary));
+  }
+
+  .professional-button:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-1px);
+  }
+
+  .section-spacing {
+    @apply py-20 px-4;
+  }
+
+  .container-width {
+    @apply max-w-6xl mx-auto;
+  }
+
+  /* Keep legacy classes for compatibility but update styles */
+  .meme-card {
+    @apply professional-card;
   }
 
   .meme-button {
-    @apply px-8 py-4 font-bold text-xl border-2 border-border rounded-xl;
-    background: var(--gradient-accent);
-    box-shadow: var(--shadow-brutal);
-    transition: all 0.3s ease;
-    text-shadow: 2px 2px 0px hsl(140 50% 15% / 0.2);
-  }
-
-  .meme-button:hover {
-    box-shadow: var(--shadow-hover);
-    transform: translate(-3px, -3px);
+    @apply professional-button;
   }
 
   .wiggle {

@@ -1,52 +1,58 @@
 import monkanaMascot from "@/assets/monkana-mascot.png";
 import { Button } from "@/components/ui/button";
 const Hero = () => {
-  return <section className="min-h-screen flex flex-col items-center justify-center px-4 py-20">
-      <div className="text-center max-w-6xl mx-auto">
+  return (
+    <section className="section-spacing min-h-screen flex items-center justify-center relative">
+      <div className="container-width text-center">
         {/* Main Title */}
-        <h1 className="hero-text text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] xl:text-[12rem] font-black leading-none mb-8 text-jungle-primary break-words">
+        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl hero-text mb-8 leading-tight font-extrabold">
           $MONKANA
         </h1>
         
-        {/* Mascot */}
-        <div className="flex justify-center mb-8">
-          <img src={monkanaMascot} alt="MONKANA Mascot" className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 wiggle drop-shadow-2xl" />
+        {/* Mascot Image */}
+        <div className="mb-12 flex justify-center">
+          <img 
+            src={monkanaMascot} 
+            alt="Monkana Mascot" 
+            className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-300"
+          />
         </div>
         
         {/* Subtitle */}
-        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-8 sm:mb-12 drop-shadow-lg px-2 leading-relaxed">
-          🚀 Monkana_Sol ($Monky), the memecoin that is establishing itself in the Solana ecosystem. 🚀
+        <p className="text-xl sm:text-2xl md:text-3xl font-semibold text-foreground/80 mb-16 max-w-4xl mx-auto leading-relaxed">
+          The Revolutionary Meme Token on Solana Ecosystem
         </p>
         
-        {/* Social Links */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+        {/* Social Media Links */}
+        <div className="flex flex-wrap gap-6 justify-center mb-20">
           <a 
-            href="https://t.me/Monkana_Sol"
-            className="meme-button text-foreground hover:text-background transition-colors hover:text-blue-400"
+            href="https://t.me/Monkana_Sol" 
+            className="professional-button hover:scale-105 transition-all duration-300 flex items-center gap-3"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className="text-2xl mr-2">📱</span>
-            Telegram
+            <span className="text-2xl">📱</span>
+            <span>Join Telegram</span>
           </a>
           <a 
-            href="https://x.com/Monky693303?t=AMD_87E_aL0l5D2z_AmefQ&s=09"
-            className="meme-button text-foreground hover:text-background transition-colors hover:text-blue-500"
+            href="https://x.com/Monky693303?t=AMD_87E_aL0l5D2z_AmefQ&s=09" 
+            className="professional-button hover:scale-105 transition-all duration-300 flex items-center gap-3"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className="text-2xl mr-2">🐦</span>
-            Twitter
+            <span className="text-2xl">🐦</span>
+            <span>Follow Twitter</span>
           </a>
         </div>
-      </div>
-      
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-        <div className="animate-bounce">
-          <div className="w-1 h-8 bg-black rounded-full"></div>
+        
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse"></div>
+          </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 export default Hero;
