@@ -64,8 +64,8 @@ const About = () => {
             
             <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-foreground leading-relaxed px-2">
               <p>
-                🐵 <strong>Monky is the symbol of the Monkana_sol meme cryptocurrency.</strong> Its creation was inspired by 
-                the monkey and its favorite food: the banana, an original creativity with the combination of the monkey 
+                <strong>Monky is the symbol of the Monkana_sol meme cryptocurrency.</strong> Its creation was inspired by 
+                the monkey and its favorite food: the banana ,  an original creativity with the combination of the monkey 
                 and its banana in the Solana meme family. It's truly a first in the crypto ecosystem.
               </p>
             </div>
