@@ -12,11 +12,11 @@
     --background: 75 25% 85%; /* Soft jungle cream */
     --foreground: 140 50% 12%; /* Deep jungle green */
 
-    --card: 60 15% 95%; /* Light cream */
-    --card-foreground: 140 50% 15%;
+    --card: 140 30% 20%; /* Dark jungle green */
+    --card-foreground: 60 30% 95%;
 
-    --popover: 60 20% 92%;
-    --popover-foreground: 140 50% 15%;
+    --popover: 140 30% 25%;
+    --popover-foreground: 60 30% 95%;
 
     --primary: 140 70% 25%; /* Rich jungle green */
     --primary-foreground: 60 30% 95%;
@@ -47,8 +47,8 @@
       hsl(60 70% 60%) 75%, 
       hsl(45 80% 65%) 100%);
     --gradient-card: linear-gradient(180deg, 
-      hsl(75 25% 95%) 0%, 
-      hsl(70 20% 90%) 100%);
+      hsl(140 30% 25%) 0%, 
+      hsl(140 25% 20%) 100%);
     --gradient-accent: linear-gradient(45deg, 
       hsl(45 85% 55%) 0%, 
       hsl(35 75% 50%) 100%);
@@ -83,8 +83,8 @@
 
 @layer components {
   .hero-text {
-    @apply font-black-ops text-foreground drop-shadow-[3px_3px_0px_rgba(255,255,255,0.9)];
-    text-shadow: 3px 3px 0px rgba(255,255,255,0.9), 6px 6px 0px hsl(140 50% 15% / 0.2);
+    @apply font-black-ops text-foreground drop-shadow-[3px_3px_0px_rgba(0,0,0,0.5)];
+    text-shadow: 3px 3px 0px rgba(0,0,0,0.5), 6px 6px 0px hsl(140 50% 15% / 0.2);
   }
 
   .meme-card {
