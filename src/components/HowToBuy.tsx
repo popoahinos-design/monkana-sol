@@ -123,7 +123,7 @@ const HowToBuy = () => {
             <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-4 break-words">📋 Contract Address</h3>
             <div 
               onClick={copyToClipboard}
-              className="bg-card text-accent p-3 sm:p-4 rounded-lg font-mono text-xs sm:text-sm md:text-base break-all cursor-pointer hover:bg-accent/10 transition-colors duration-200 border-2 border-border hover:border-accent"
+              className="bg-card text-red-600 p-3 sm:p-4 rounded-lg font-mono text-xs sm:text-sm md:text-base break-all cursor-pointer hover:bg-accent/10 transition-colors duration-200 border-2 border-border hover:border-accent font-bold"
               title="Click to copy"
             >
               {copied ? "✅ Copied!" : contractAddress}
