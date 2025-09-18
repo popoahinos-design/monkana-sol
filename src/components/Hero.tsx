@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="text-center max-w-6xl mx-auto">
         {/* Main Title */}
         <h1 className="hero-text text-8xl sm:text-9xl md:text-[12rem] lg:text-[15rem] xl:text-[18rem] font-black leading-none mb-8">
-          $TOKEN
+          $MONKANA
         </h1>
         
         {/* Mascot */}

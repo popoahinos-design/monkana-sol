@@ -57,7 +57,7 @@ const Footer = () => {
           {/* Disclaimer */}
           <div className="border-t-4 border-black pt-8 mt-8">
             <p className="text-sm md:text-base font-semibold text-black opacity-80 leading-relaxed">
-              ⚠️ <strong>DISCLAIMER:</strong> $TOKEN is a meme token created for entertainment purposes. 
+              ⚠️ <strong>DISCLAIMER:</strong> $MONKANA is a meme token created for entertainment purposes. 
               Cryptocurrency investments carry risk. Only invest what you can afford to lose. 
               Do your own research before trading. Not financial advice.
             </p>
@@ -65,7 +65,7 @@ const Footer = () => {
           
           {/* Copyright */}
           <div className="mt-6 text-lg font-bold text-black">
-            © 2024 $TOKEN • Made with 💎 by the Community
+            © 2024 $MONKANA • Made with 💎 by the Community
           </div>
         </div>
       </div>

@@ -58,7 +58,7 @@ const Tokenomics = () => {
               </div>
               
               <p className="text-lg font-semibold text-muted-foreground">
-                {item.value} $TOKEN
+                {item.value} $MONKANA
               </p>
               
               {/* Visual bar */}

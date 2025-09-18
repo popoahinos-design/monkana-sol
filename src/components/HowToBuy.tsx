@@ -9,19 +9,19 @@ const HowToBuy = () => {
     {
       number: "2", 
       title: "Get Some ETH/SOL",
-      description: "You need ETH or SOL to swap for $TOKEN. Buy directly in your wallet or transfer from an exchange.",
+      description: "You need ETH or SOL to swap for $MONKANA. Buy directly in your wallet or transfer from an exchange.",
       icon: "💰"
     },
     {
       number: "3",
       title: "Go to DEX",
-      description: "Visit Uniswap, PancakeSwap, or Raydium. Connect your wallet and paste the $TOKEN contract address.",
+      description: "Visit Uniswap, PancakeSwap, or Raydium. Connect your wallet and paste the $MONKANA contract address.",
       icon: "🔄"
     },
     {
       number: "4",
-      title: "Swap for $TOKEN",
-      description: "Exchange your ETH/SOL for $TOKEN. Set slippage to 5-10% and confirm the transaction. Welcome to the club!",
+      title: "Swap for $MONKANA",
+      description: "Exchange your ETH/SOL for $MONKANA. Set slippage to 5-10% and confirm the transaction. Welcome to the club!",
       icon: "🎉"
     }
   ];
