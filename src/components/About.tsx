@@ -42,7 +42,7 @@ const About = () => {
               we're building a space station!
             </p>
             
-            <p className="text-xl sm:text-2xl md:text-3xl font-black text-accent break-words">
+            <p className="text-xl sm:text-2xl md:text-3xl font-black text-blue-600 break-words">
               🌟 HODL STRONG, MEME HARDER! 🌟
             </p>
           </div>
