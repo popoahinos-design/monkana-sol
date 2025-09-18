@@ -2,25 +2,19 @@ const Footer = () => {
   const socialLinks = [
     {
       name: "Telegram",
-      url: "#",
+      url: "https://t.me/Monkana_Sol",
       icon: "📱",
       color: "hover:text-blue-400"
     },
     {
       name: "Twitter", 
-      url: "#",
+      url: "https://x.com/Monky693303?t=AMD_87E_aL0l5D2z_AmefQ&s=09",
       icon: "🐦",
       color: "hover:text-blue-500"
     },
     {
-      name: "Discord",
-      url: "#", 
-      icon: "💬",
-      color: "hover:text-purple-500"
-    },
-    {
-      name: "DexTools",
-      url: "#",
+      name: "Dexscreener",
+      url: "https://dexscreener.com/solana/7vjh6emhufofc8b2pwrx3qrgy92pfpajk3hiomupwtkp",
       icon: "📊", 
       color: "hover:text-green-500"
     }

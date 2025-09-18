@@ -23,7 +23,10 @@ const Hero = () => {
           <Button className="meme-button text-black hover:text-white">
             🛒 BUY NOW
           </Button>
-          <Button className="meme-button bg-secondary hover:bg-secondary/80 text-white">
+          <Button 
+            className="meme-button bg-secondary hover:bg-secondary/80 text-white"
+            onClick={() => window.open('https://t.me/Monkana_Sol', '_blank')}
+          >
             📱 JOIN TELEGRAM
           </Button>
         </div>
