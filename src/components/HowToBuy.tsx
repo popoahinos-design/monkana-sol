@@ -1,4 +1,29 @@
+import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
+
 const HowToBuy = () => {
+  const { toast } = useToast();
+  const [copied, setCopied] = useState(false);
+  const contractAddress = "4aW4s1hkZogELxU7mCYD82UzrwQ3h69AcmYoSsRQbonk";
+
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(contractAddress);
+      setCopied(true);
+      toast({
+        title: "✅ Copied!",
+        description: "Contract address copied to clipboard",
+      });
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      toast({
+        title: "❌ Failed to copy",
+        description: "Please copy manually",
+        variant: "destructive",
+      });
+    }
+  };
+
   const steps = [
     {
       number: "1",
@@ -83,11 +108,15 @@ const HowToBuy = () => {
         <div className="mt-16 text-center">
           <div className="meme-card max-w-2xl mx-auto">
             <h3 className="text-3xl font-bold text-black mb-4">📋 Contract Address</h3>
-            <div className="bg-black text-accent p-4 rounded-lg font-mono text-sm md:text-base break-all">
-              4aW4s1hkZogELxU7mCYD82UzrwQ3h69AcmYoSsRQbonk
+            <div 
+              onClick={copyToClipboard}
+              className="bg-black text-accent p-4 rounded-lg font-mono text-sm md:text-base break-all cursor-pointer hover:bg-gray-800 transition-colors duration-200 border-2 border-transparent hover:border-accent"
+              title="Click to copy"
+            >
+              {copied ? "✅ Copied!" : contractAddress}
             </div>
             <p className="text-sm text-muted-foreground mt-2 font-semibold">
-              ⚠️ Always verify the contract address before trading!
+              ⚠️ Always verify the contract address before trading! Click to copy.
             </p>
           </div>
         </div>
