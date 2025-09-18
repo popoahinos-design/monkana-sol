@@ -105,6 +105,18 @@ const HowToBuy = () => {
           </div>
         </div>
 
+        {/* Token Supply */}
+        <div className="mt-8 sm:mt-16 text-center">
+          <div className="meme-card max-w-2xl mx-auto">
+            <h3 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl hero-text text-center mb-4 break-words">
+              Token Supply
+            </h3>
+            <div className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-foreground break-words">
+              1,000,000,000 $MONKANA
+            </div>
+          </div>
+        </div>
+
         {/* Contract Address */}
         <div className="mt-8 sm:mt-16 text-center">
           <div className="meme-card max-w-2xl mx-auto">
