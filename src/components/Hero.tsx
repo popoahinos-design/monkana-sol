@@ -5,8 +5,20 @@ const Hero = () => {
     <section className="section-spacing min-h-screen flex items-center justify-center relative">
       <div className="container-width text-center">
         {/* Main Title */}
-        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl hero-text mb-8 leading-tight font-extrabold">
-          $MONKANA
+        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl mb-8 leading-tight font-extrabold font-black-ops relative inline-block">
+          <span className="text-[hsl(var(--gold))] drop-shadow-2xl" style={{textShadow: '3px 3px 0px rgba(0,0,0,0.3), 6px 6px 10px rgba(0,0,0,0.2)'}}>
+            $M
+            <span className="relative inline-block">
+              O
+              <img 
+                src={monkanaMascot} 
+                alt="" 
+                className="absolute inset-0 w-full h-full object-contain rounded-full opacity-90 animate-pulse"
+                style={{transform: 'scale(0.8)'}}
+              />
+            </span>
+            NKANA
+          </span>
         </h1>
         
         {/* Mascot Image */}

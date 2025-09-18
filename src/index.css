@@ -33,6 +33,9 @@
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
+    --gold: 45 100% 50%; /* Golden yellow */
+    --gold-foreground: 222 84% 4.9%;
+
     --border: 214 32% 91%;
     --input: 214 32% 91%;
     --ring: 221 83% 53%;
