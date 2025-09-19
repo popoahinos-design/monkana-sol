@@ -112,7 +112,7 @@ const HowToBuy = () => {
               Token Supply
             </h3>
             <div className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-foreground break-words">
-              1,000,000,000 $MONKANA
+              1,000,000,000 $MONKY
             </div>
           </div>
         </div>
