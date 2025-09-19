@@ -1,52 +1,43 @@
 const Tokenomics = () => {
-  const tokenomicsData = [
-    {
-      label: "Total Supply",
-      value: "1,000,000,000",
-      percentage: "100%",
-      color: "bg-secondary",
-      icon: "💎"
-    },
-    {
-      label: "Liquidity Pool",
-      value: "400,000,000",
-      percentage: "40%",
-      color: "bg-accent",
-      icon: "🌊"
-    },
-    {
-      label: "Marketing",
-      value: "50,000,000", 
-      percentage: "5%",
-      color: "bg-primary",
-      icon: "📢"
-    },
-    {
-      label: "Team",
-      value: "40,000,000",
-      percentage: "4%",
-      color: "bg-destructive",
-      icon: "👥"
-    },
-    {
-      label: "Development", 
-      value: "50,000,000",
-      percentage: "5%",
-      color: "bg-muted",
-      icon: "🛠️"
-    }
-  ];
-
-  return (
-    <section className="py-20 px-4">
+  const tokenomicsData = [{
+    label: "Total Supply",
+    value: "1,000,000,000",
+    percentage: "100%",
+    color: "bg-secondary",
+    icon: "💎"
+  }, {
+    label: "Liquidity Pool",
+    value: "400,000,000",
+    percentage: "40%",
+    color: "bg-accent",
+    icon: "🌊"
+  }, {
+    label: "Marketing",
+    value: "50,000,000",
+    percentage: "5%",
+    color: "bg-primary",
+    icon: "📢"
+  }, {
+    label: "Team",
+    value: "40,000,000",
+    percentage: "4%",
+    color: "bg-destructive",
+    icon: "👥"
+  }, {
+    label: "Development",
+    value: "50,000,000",
+    percentage: "5%",
+    color: "bg-muted",
+    icon: "🛠️"
+  }];
+  return <section className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl hero-text text-center mb-8 sm:mb-16 break-words">
           TOKENOMICS
         </h2>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 mb-8 sm:mb-16">
-          {tokenomicsData.map((item, index) => (
-            <div key={index} className="meme-card text-center">
+          {tokenomicsData.map((item, index) => <div key={index} className="meme-card text-center">
               <div className="text-5xl mb-4">{item.icon}</div>
               
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-2 break-words">
@@ -63,22 +54,20 @@ const Tokenomics = () => {
               
               {/* Visual bar */}
               <div className="w-full bg-black/20 rounded-full h-4 mt-4">
-                <div 
-                  className={`h-4 rounded-full ${item.color} transition-all duration-1000`}
-                  style={{ width: item.percentage }}
-                ></div>
+                <div className={`h-4 rounded-full ${item.color} transition-all duration-1000`} style={{
+              width: item.percentage
+            }}></div>
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
         
         {/* No Tax Message */}
         <div className="meme-card max-w-4xl mx-auto mb-8 sm:mb-16">
           <div className="text-center">
-            <p className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-4">
+            <p className="text-lg sm:text-xl font-bold mb-4 text-[#10f7a1] md:text-5xl">
               No taxes, no bullshit. It's as simple as that.
             </p>
-            <p className="text-base sm:text-lg md:text-xl font-semibold text-muted-foreground">
+            <p className="text-base sm:text-lg font-semibold text-[#58f0eb] md:text-5xl">
               LP tokens are burned and contract ownership is renounced.
             </p>
           </div>
@@ -97,11 +86,11 @@ const Tokenomics = () => {
             </div>
             <div className="flex items-center space-x-3">
               <span className="text-2xl">🔒</span>
-              <span>Liquidity Locked</span>
+              <span>Burnt Liquidity</span>
             </div>
             <div className="flex items-center space-x-3">
               <span className="text-2xl">👑</span>
-              <span>Community Owned</span>
+              <span>Contract ownership is renounced</span>
             </div>
             <div className="flex items-center space-x-3">
               <span className="text-2xl">🚀</span>
@@ -110,8 +99,6 @@ const Tokenomics = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Tokenomics;
