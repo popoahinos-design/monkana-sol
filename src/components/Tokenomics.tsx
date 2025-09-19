@@ -85,7 +85,7 @@ const Tokenomics = () => {
               <span>0% Tax on Buy/Sell</span>
             </div>
             <div className="flex items-center space-x-3">
-              <span className="text-2xl">🔒</span>
+              <span className="text-2xl">🔥</span>
               <span>Burnt Liquidity</span>
             </div>
             <div className="flex items-center space-x-3">
