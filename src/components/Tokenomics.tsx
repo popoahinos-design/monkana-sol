@@ -72,6 +72,18 @@ const Tokenomics = () => {
           ))}
         </div>
         
+        {/* No Tax Message */}
+        <div className="meme-card max-w-4xl mx-auto mb-8 sm:mb-16">
+          <div className="text-center">
+            <p className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-4">
+              No taxes, no bullshit. It's as simple as that.
+            </p>
+            <p className="text-base sm:text-lg md:text-xl font-semibold text-muted-foreground">
+              LP tokens are burned and contract ownership is renounced.
+            </p>
+          </div>
+        </div>
+        
         {/* Key Features */}
         <div className="meme-card max-w-4xl mx-auto">
           <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground text-center mb-6 sm:mb-8 break-words">
