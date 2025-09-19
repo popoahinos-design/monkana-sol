@@ -9,22 +9,22 @@ const Tokenomics = () => {
     },
     {
       label: "Liquidity Pool",
-      value: "800,000,000",
-      percentage: "80%",
+      value: "400,000,000",
+      percentage: "40%",
       color: "bg-accent",
       icon: "🌊"
     },
     {
       label: "Marketing",
-      value: "100,000,000", 
-      percentage: "10%",
+      value: "50,000,000", 
+      percentage: "5%",
       color: "bg-primary",
       icon: "📢"
     },
     {
       label: "Team",
-      value: "50,000,000",
-      percentage: "5%",
+      value: "40,000,000",
+      percentage: "4%",
       color: "bg-destructive",
       icon: "👥"
     },
@@ -58,7 +58,7 @@ const Tokenomics = () => {
               </div>
               
               <p className="text-sm sm:text-base md:text-lg font-semibold text-muted-foreground break-all">
-                {item.value} $MONKANA
+                {item.value} $MONKY
               </p>
               
               {/* Visual bar */}
