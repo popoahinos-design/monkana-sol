@@ -46,7 +46,7 @@ const HowToBuy = () => {
     {
       number: "4",
       title: "Swap for $MONKANA",
-      description: "Exchange your ETH/SOL for $MONKANA. Set slippage to 5-10% and confirm the transaction. Welcome to the club!",
+      description: "Exchange your SOL for $MONKANA. Set slippage to 5-10% and confirm the transaction. Welcome to the club!",
       icon: "🎉"
     }
   ];
