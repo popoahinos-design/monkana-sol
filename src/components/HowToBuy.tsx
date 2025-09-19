@@ -40,7 +40,7 @@ const HowToBuy = () => {
     {
       number: "3",
       title: "Go to DEX",
-      description: "Visit Uniswap, PancakeSwap, or Raydium. Connect your wallet and paste the $MONKANA contract address.",
+      description: "Raydium. Connect your wallet and paste the $MONKANA contract address.",
       icon: "🔄"
     },
     {
