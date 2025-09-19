@@ -33,7 +33,7 @@ const HowToBuy = () => {
     },
     {
       number: "2", 
-      title: "Get Some ETH/SOL",
+      title: "Get Some SOL",
       description: "You need SOL to swap for $MONKANA. Buy directly in your wallet or transfer from an exchange.",
       icon: "💰"
     },
