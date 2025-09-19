@@ -1,5 +1,6 @@
 import monkanaMascot from "@/assets/monkana-mascot.png";
 import { Button } from "@/components/ui/button";
+import { Send, Twitter } from "lucide-react";
 const Hero = () => {
   return (
     <section className="section-spacing min-h-screen flex items-center justify-center relative">
@@ -43,7 +44,7 @@ const Hero = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className="text-2xl">📱</span>
+            <Send className="w-6 h-6" />
             <span>Join Telegram</span>
           </a>
           <a 
@@ -52,7 +53,7 @@ const Hero = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className="text-2xl">🐦</span>
+            <Twitter className="w-6 h-6" />
             <span>Follow Twitter</span>
           </a>
         </div>

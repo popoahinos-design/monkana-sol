@@ -1,21 +1,23 @@
+import { Send, Twitter, BarChart3 } from "lucide-react";
+
 const Footer = () => {
   const socialLinks = [
     {
       name: "Telegram",
       url: "https://t.me/Monkana_Sol",
-      icon: "📱",
+      icon: Send,
       color: "hover:text-blue-400"
     },
     {
       name: "Twitter", 
       url: "https://x.com/Monky693303?t=AMD_87E_aL0l5D2z_AmefQ&s=09",
-      icon: "🐦",
+      icon: Twitter,
       color: "hover:text-blue-500"
     },
     {
       name: "Dexscreener",
       url: "https://dexscreener.com/solana/7vjh6emhufofc8b2pwrx3qrgy92pfpajk3hiomupwtkp",
-      icon: "📊", 
+      icon: BarChart3, 
       color: "hover:text-green-500"
     }
   ];
@@ -42,7 +44,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span className="text-2xl">{social.icon}</span>
+                <social.icon className="w-6 h-6" />
                 <span>{social.name}</span>
               </a>
             ))}
