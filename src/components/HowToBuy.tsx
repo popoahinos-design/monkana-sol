@@ -28,7 +28,7 @@ const HowToBuy = () => {
     {
       number: "1",
       title: "Create a Wallet",
-      description: "Download MetaMask, Phantom, or your preferred wallet from the app store. Desktop users can get the browser extension.",
+      description: "Download Phantom, or your preferred wallet from the app store. Desktop users can get the browser extension.",
       icon: "👛"
     },
     {
