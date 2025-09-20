@@ -90,8 +90,20 @@ const Footer = () => {
             </p>
           </div>
           
+          {/* Contact */}
+          <div className="mt-8 text-lg md:text-xl font-semibold text-foreground/80 flex items-center justify-center gap-3">
+            <Mail className="w-5 h-5" />
+            <span>Contact us: </span>
+            <button 
+              onClick={() => copyToClipboard("monky@monkana-sol.com")}
+              className="text-primary hover:text-primary/80 transition-colors cursor-pointer underline"
+            >
+              monky@monkana-sol.com
+            </button>
+          </div>
+          
           {/* Copyright */}
-          <div className="mt-8 text-base md:text-lg font-semibold text-foreground/60">
+          <div className="mt-6 text-base md:text-lg font-semibold text-foreground/60">
             © 2025 MONKANA • Made with 💎 by the Community
           </div>
         </div>
