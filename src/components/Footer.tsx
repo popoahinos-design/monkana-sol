@@ -1,4 +1,5 @@
 import { Send, Twitter, BarChart3, Mail } from "lucide-react";
+import { ContactForm } from "./ContactForm";
 
 const Footer = () => {
   const copyToClipboard = (text: string) => {
@@ -94,12 +95,11 @@ const Footer = () => {
           <div className="mt-8 text-lg md:text-xl font-semibold text-foreground/80 flex items-center justify-center gap-3">
             <Mail className="w-5 h-5" />
             <span>Contact us: </span>
-            <button 
-              onClick={() => copyToClipboard("monky@monkana-sol.com")}
-              className="text-primary hover:text-primary/80 transition-colors cursor-pointer underline"
-            >
-              monky@monkana-sol.com
-            </button>
+            <ContactForm>
+              <button className="text-primary hover:text-primary/80 transition-colors cursor-pointer underline">
+                monky@monkana-sol.com
+              </button>
+            </ContactForm>
           </div>
           
           {/* Copyright */}
