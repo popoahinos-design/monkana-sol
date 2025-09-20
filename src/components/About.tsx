@@ -15,7 +15,7 @@ const About = () => {
           
           <div className="space-y-4 sm:space-y-6 text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-foreground leading-relaxed px-2">
             <p>
-              🛡️ <strong className="text-blue-600">Monky is the symbol of the Monkana_sol meme cryptocurrency. Its creation was inspired by the monkey and its favorite food: the banana, an original creativity with the combination of the monkey and its banana in the Solana meme family. It's truly a first in the crypto ecosystem.</strong>
+              🛡️ <strong className="text-blue-600">$Monky is the symbol of the Monkana_sol meme cryptocurrency. Its creation was inspired by the monkey and its favorite food: the banana, an original creativity with the combination of the monkey and its banana in the Solana meme family. It's truly a first in the crypto ecosystem.</strong>
             </p>
             
             <p>
@@ -47,7 +47,7 @@ const About = () => {
             </h3>
             
             <div className="flex justify-center mb-8">
-              <img src={monkBananaCar} alt="Monky in Banana Car" className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-2xl object-contain shadow-glow border-2 border-border bg-gradient-to-br from-primary/10 to-accent/10 hover-scale animate-fade-in hover:animate-pulse transition-all duration-300 hover:shadow-2xl hover:rotate-2" />
+              <img src={monkBananaCar} alt="$Monky in Banana Car" className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-2xl object-contain shadow-glow border-2 border-border bg-gradient-to-br from-primary/10 to-accent/10 hover-scale animate-fade-in hover:animate-pulse transition-all duration-300 hover:shadow-2xl hover:rotate-2" />
             </div>
             
             <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-foreground leading-relaxed px-2">

@@ -26,7 +26,7 @@ const Hero = () => {
         </div>
         
         {/* Subtitle */}
-        <p className="text-xl sm:text-2xl md:text-3xl font-semibold text-foreground/80 mb-16 max-w-4xl mx-auto leading-relaxed">Monkana_Sol (Monky), the memecoin that is establishing itself in the Solana ecosystem. 🐒🍌</p>
+        <p className="text-xl sm:text-2xl md:text-3xl font-semibold text-foreground/80 mb-16 max-w-4xl mx-auto leading-relaxed">Monkana_Sol ($Monky), the memecoin that is establishing itself in the Solana ecosystem. 🐒🍌</p>
         
         {/* Social Media Links */}
         <div className="flex flex-wrap gap-6 justify-center mb-20">
