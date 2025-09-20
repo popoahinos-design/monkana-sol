@@ -1,24 +1,40 @@
-import { Send, Twitter, BarChart3 } from "lucide-react";
+import { Send, Twitter, BarChart3, Mail } from "lucide-react";
 
 const Footer = () => {
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard.writeText(text).then(() => {
+      // Optionally add toast notification here
+    });
+  };
+
   const socialLinks = [
     {
       name: "Telegram",
       url: "https://t.me/Monkana_Sol",
       icon: Send,
-      color: "hover:text-blue-400"
+      color: "hover:text-blue-400",
+      type: "link"
     },
     {
       name: "Twitter", 
       url: "https://x.com/Monky693303?t=AMD_87E_aL0l5D2z_AmefQ&s=09",
       icon: Twitter,
-      color: "hover:text-blue-500"
+      color: "hover:text-blue-500",
+      type: "link"
+    },
+    {
+      name: "Email",
+      url: "monky@monkana-sol.com",
+      icon: Mail,
+      color: "hover:text-orange-500",
+      type: "email"
     },
     {
       name: "Dexscreener",
       url: "https://dexscreener.com/solana/7vjh6emhufofc8b2pwrx3qrgy92pfpajk3hiomupwtkp",
       icon: BarChart3, 
-      color: "hover:text-green-500"
+      color: "hover:text-green-500",
+      type: "link"
     }
   ];
 
@@ -36,18 +52,33 @@ const Footer = () => {
           
           {/* Social Links */}
           <div className="flex flex-wrap justify-center gap-6 mb-12">
-            {socialLinks.map((social) => (
-              <a 
-                key={social.name}
-                href={social.url}
-                className={`professional-button ${social.color} transition-all duration-300 flex items-center gap-3`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <social.icon className="w-6 h-6" />
-                <span>{social.name}</span>
-              </a>
-            ))}
+            {socialLinks.map((social) => {
+              if (social.type === "email") {
+                return (
+                  <button
+                    key={social.name}
+                    onClick={() => copyToClipboard(social.url)}
+                    className={`professional-button ${social.color} transition-all duration-300 flex items-center gap-3 cursor-pointer`}
+                  >
+                    <social.icon className="w-6 h-6" />
+                    <span>{social.name}</span>
+                  </button>
+                );
+              }
+              
+              return (
+                <a 
+                  key={social.name}
+                  href={social.url}
+                  className={`professional-button ${social.color} transition-all duration-300 flex items-center gap-3`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <social.icon className="w-6 h-6" />
+                  <span>{social.name}</span>
+                </a>
+              );
+            })}
           </div>
           
           {/* Disclaimer */}
