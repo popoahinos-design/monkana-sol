@@ -29,7 +29,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     const emailResponse = await resend.emails.send({
       from: "Monkana <onboarding@resend.dev>",
-      to: ["contact@monkana.com"], // Remplacez par votre email de destination
+      to: ["monky@monkana-sol.com"],
       reply_to: email,
       subject: `[Contact] ${subject}`,
       html: `
