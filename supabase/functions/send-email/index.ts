@@ -1,87 +1,83 @@
-import "jsr:@supabase/functions-js/edge-runtime.ts";
+import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
+import { Resend } from "npm:resend@2.0.0";
 
-const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
+const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
-interface ContactFormData {
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers":
+    "authorization, x-client-info, apikey, content-type",
+};
+
+interface ContactEmailRequest {
   name: string;
   email: string;
   subject: string;
   message: string;
 }
 
-Deno.serve(async (req) => {
+const handler = async (req: Request): Promise<Response> => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
-    return new Response(null, {
-      status: 200,
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-        "Access-Control-Allow-Methods": "POST, OPTIONS",
-      },
-    });
+    return new Response(null, { headers: corsHeaders });
   }
 
   try {
-    const { name, email, subject, message }: ContactFormData = await req.json();
+    const { name, email, subject, message }: ContactEmailRequest = await req.json();
 
-    if (!RESEND_API_KEY) {
-      throw new Error("RESEND_API_KEY not configured");
-    }
+    console.log("Sending email from:", name, email);
 
-    // Send email using Resend API
-    const emailResponse = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${RESEND_API_KEY}`,
-      },
-      body: JSON.stringify({
-        from: "contact@monkana-sol.com", // You'll need to verify this domain with Resend
-        to: "monky@monkana-sol.com",
-        subject: `[MONKANA Contact] ${subject}`,
-        html: `
-          <h2>Nouveau message de contact depuis MONKANA</h2>
-          <p><strong>Nom:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Sujet:</strong> ${subject}</p>
-          <p><strong>Message:</strong></p>
-          <p>${message.replace(/\n/g, '<br>')}</p>
-        `,
-      }),
+    const emailResponse = await resend.emails.send({
+      from: "Monkana <onboarding@resend.dev>",
+      to: ["contact@monkana.com"], // Remplacez par votre email de destination
+      reply_to: email,
+      subject: `[Contact] ${subject}`,
+      html: `
+        <h2>Nouveau message de contact</h2>
+        <p><strong>Nom:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Sujet:</strong> ${subject}</p>
+        <p><strong>Message:</strong></p>
+        <div style="background: #f5f5f5; padding: 15px; border-radius: 5px; margin: 10px 0;">
+          ${message.replace(/\n/g, '<br>')}
+        </div>
+      `,
     });
 
-    if (!emailResponse.ok) {
-      const error = await emailResponse.text();
-      throw new Error(`Resend API error: ${error}`);
-    }
+    // Send confirmation email to the sender
+    await resend.emails.send({
+      from: "Monkana <onboarding@resend.dev>",
+      to: [email],
+      subject: "Confirmation - Message reçu",
+      html: `
+        <h2>Bonjour ${name},</h2>
+        <p>Nous avons bien reçu votre message concernant : <strong>${subject}</strong></p>
+        <p>Nous vous répondrons dans les plus brefs délais.</p>
+        <p>Merci de nous avoir contactés !</p>
+        <br>
+        <p>L'équipe Monkana</p>
+      `,
+    });
 
-    return new Response(
-      JSON.stringify({ success: true, message: "Email sent successfully" }),
-      {
-        status: 200,
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
-        },
-      }
-    );
+    console.log("Email sent successfully:", emailResponse);
 
-  } catch (error) {
-    console.error("Error sending email:", error);
-    
+    return new Response(JSON.stringify(emailResponse), {
+      status: 200,
+      headers: {
+        "Content-Type": "application/json",
+        ...corsHeaders,
+      },
+    });
+  } catch (error: any) {
+    console.error("Error in send-email function:", error);
     return new Response(
-      JSON.stringify({ 
-        success: false, 
-        error: error instanceof Error ? error.message : "Unknown error" 
-      }),
+      JSON.stringify({ error: error.message }),
       {
         status: 500,
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
-        },
+        headers: { "Content-Type": "application/json", ...corsHeaders },
       }
     );
   }
-});
+};
+
+serve(handler);
