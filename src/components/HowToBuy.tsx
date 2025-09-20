@@ -31,17 +31,17 @@ const HowToBuy = () => {
   }, {
     number: "2",
     title: "Get Some SOL",
-    description: "You need SOL to swap for $MONKANA. Buy directly in your wallet or transfer from an exchange.",
+    description: "You need SOL to swap for MONKANA. Buy directly in your wallet or transfer from an exchange.",
     icon: "💰"
   }, {
     number: "3",
     title: "Go to DEX",
-    description: "Raydium. Connect your wallet and paste the $MONKANA contract address.",
+    description: "Raydium. Connect your wallet and paste the MONKANA contract address.",
     icon: "🔄"
   }, {
     number: "4",
-    title: "Swap for $MONKANA",
-    description: "Exchange your SOL for $MONKANA. Set slippage to 5-10% and confirm the transaction. Welcome to the club!",
+    title: "Swap for MONKANA",
+    description: "Exchange your SOL for MONKANA. Set slippage to 5-10% and confirm the transaction. Welcome to the club!",
     icon: "🎉"
   }];
   return <section className="py-20 px-4">
@@ -99,7 +99,7 @@ const HowToBuy = () => {
             <h3 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl hero-text text-center mb-4 break-words">
               Token Supply
             </h3>
-            <div className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-foreground break-words">1,000,000,000 $Monky</div>
+            <div className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-foreground break-words">1,000,000,000 Monky</div>
           </div>
         </div>
 

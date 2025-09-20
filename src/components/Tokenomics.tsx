@@ -49,7 +49,7 @@ const Tokenomics = () => {
               </div>
               
               <p className="text-sm sm:text-base md:text-lg font-semibold text-muted-foreground break-all">
-                {item.value} $MONKY
+                {item.value} MONKY
               </p>
               
               {/* Visual bar */}

@@ -20,13 +20,13 @@ const About = () => {
             </p>
             
             <p>
-              🎯 <strong>$MONKANA</strong> is not just another meme coin - it's the future of decentralized fun! 
+              🎯 <strong>MONKANA</strong> is not just another meme coin - it's the future of decentralized fun! 
               Born from the depths of the internet, our mascot represents the power of community-driven 
               cryptocurrency.
             </p>
             
             <p>
-              💎 With diamond hands and a vision for the moon, $MONKANA brings together meme culture 
+              💎 With diamond hands and a vision for the moon, MONKANA brings together meme culture 
               and serious gains. We're building more than just a token - we're creating a movement!
             </p>
             

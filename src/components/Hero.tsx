@@ -9,7 +9,7 @@ const Hero = () => {
           <span className="text-[hsl(var(--gold))] drop-shadow-2xl" style={{
           textShadow: '3px 3px 0px rgba(0,0,0,0.3), 6px 6px 10px rgba(0,0,0,0.2)'
         }}>
-            $M
+            M
             <span className="relative inline-block">
               O
               <img src={monkanaMascot} alt="" className="absolute inset-0 w-full h-full object-contain rounded-full opacity-90 animate-pulse" style={{
@@ -26,7 +26,7 @@ const Hero = () => {
         </div>
         
         {/* Subtitle */}
-        <p className="text-xl sm:text-2xl md:text-3xl font-semibold text-foreground/80 mb-16 max-w-4xl mx-auto leading-relaxed">Monkana_Sol ($Monky), the memecoin that is establishing itself in the Solana ecosystem. 🐒🍌</p>
+        <p className="text-xl sm:text-2xl md:text-3xl font-semibold text-foreground/80 mb-16 max-w-4xl mx-auto leading-relaxed">Monkana_Sol (Monky), the memecoin that is establishing itself in the Solana ecosystem. 🐒🍌</p>
         
         {/* Social Media Links */}
         <div className="flex flex-wrap gap-6 justify-center mb-20">
