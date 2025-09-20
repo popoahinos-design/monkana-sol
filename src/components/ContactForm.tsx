@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/lib/supabase";
 
 interface ContactFormProps {
   children: React.ReactNode;
@@ -27,25 +28,22 @@ export const ContactForm = ({ children }: ContactFormProps) => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+      const { data, error } = await supabase.functions.invoke('send-email', {
+        body: formData
       });
 
-      if (response.ok) {
-        toast({
-          title: "Message envoyé !",
-          description: "Votre message a été envoyé avec succès. Nous vous répondrons bientôt.",
-        });
-        setFormData({ name: "", email: "", subject: "", message: "" });
-        setIsOpen(false);
-      } else {
-        throw new Error('Erreur lors de l\'envoi');
+      if (error) {
+        throw error;
       }
+
+      toast({
+        title: "Message envoyé !",
+        description: "Votre message a été envoyé avec succès. Nous vous répondrons bientôt.",
+      });
+      setFormData({ name: "", email: "", subject: "", message: "" });
+      setIsOpen(false);
     } catch (error) {
+      console.error('Error sending email:', error);
       toast({
         title: "Erreur",
         description: "Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer.",
