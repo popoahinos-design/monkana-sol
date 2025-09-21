@@ -28,7 +28,7 @@ const handler = async (req: Request): Promise<Response> => {
     console.log("Sending email from:", name, email);
 
     const emailResponse = await resend.emails.send({
-      from: "Monkana <contact@monkana-sol.com>",
+      from: "Monkana <monky@monkana-sol.com>",
       to: ["monky@monkana-sol.com"],
       reply_to: email,
       subject: `[Contact] ${subject}`,
@@ -46,7 +46,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send confirmation email to the sender
     await resend.emails.send({
-      from: "Monkana <contact@monkana-sol.com>",
+      from: "Monkana <monky@monkana-sol.com>",
       to: [email],
       subject: "Confirmation - Message reçu",
       html: `
