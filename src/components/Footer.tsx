@@ -56,14 +56,14 @@ const Footer = () => {
             {socialLinks.map((social) => {
               if (social.type === "email") {
                 return (
-                  <button
-                    key={social.name}
-                    onClick={() => copyToClipboard(social.url)}
-                    className={`professional-button ${social.color} transition-all duration-300 flex items-center gap-3 cursor-pointer`}
-                  >
-                    <social.icon className="w-6 h-6" />
-                    <span>{social.name}</span>
-                  </button>
+                  <ContactForm key={social.name}>
+                    <button
+                      className={`professional-button ${social.color} transition-all duration-300 flex items-center gap-3 cursor-pointer`}
+                    >
+                      <social.icon className="w-6 h-6" />
+                      <span>{social.name}</span>
+                    </button>
+                  </ContactForm>
                 );
               }
               
