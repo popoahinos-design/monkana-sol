@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -72,6 +72,9 @@ export const ContactForm = ({ children }: ContactFormProps) => {
             <Mail className="w-5 h-5" />
             Contactez-nous
           </DialogTitle>
+          <DialogDescription>
+            Remplissez le formulaire ci-dessous pour nous envoyer un message. Nous vous répondrons rapidement.
+          </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
