@@ -33,10 +33,10 @@ const handler = async (req: Request): Promise<Response> => {
       reply_to: email,
       subject: `[Contact] ${subject}`,
       html: `
-        <h2>Nouveau message de contact</h2>
-        <p><strong>Nom:</strong> ${name}</p>
+        <h2>New Contact Message</h2>
+        <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Sujet:</strong> ${subject}</p>
+        <p><strong>Subject:</strong> ${subject}</p>
         <p><strong>Message:</strong></p>
         <div style="background: #f5f5f5; padding: 15px; border-radius: 5px; margin: 10px 0;">
           ${message.replace(/\n/g, '<br>')}
@@ -48,14 +48,14 @@ const handler = async (req: Request): Promise<Response> => {
     await resend.emails.send({
       from: "Monkana <monky@monkana-sol.com>",
       to: [email],
-      subject: "Confirmation - Message reçu",
+      subject: "Confirmation - Message Received",
       html: `
-        <h2>Bonjour ${name},</h2>
-        <p>Nous avons bien reçu votre message concernant : <strong>${subject}</strong></p>
-        <p>Nous vous répondrons dans les plus brefs délais.</p>
-        <p>Merci de nous avoir contactés !</p>
+        <h2>Hello ${name},</h2>
+        <p>We have successfully received your message regarding: <strong>${subject}</strong></p>
+        <p>We will respond to you as soon as possible.</p>
+        <p>Thank you for contacting us!</p>
         <br>
-        <p>L'équipe Monkana</p>
+        <p>The Monkana Team</p>
       `,
     });
 
